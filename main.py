@@ -11,7 +11,7 @@ st.markdown(
     """
     <style>
     .main {
-        background-color: #f9f9f9;  /* Mengganti warna latar belakang */
+        background-color: #000000;  /* Mengganti warna latar belakang */
     }
     h1 {
         color: #3E4E50;  /* Warna judul */
