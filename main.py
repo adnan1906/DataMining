@@ -11,23 +11,33 @@ st.markdown(
     """
     <style>
     .main {
-        background-color: #000000;  /* Mengganti warna latar belakang */
+        background-color: #000000;  /* Latar belakang hitam */
     }
     h1 {
-        color: #3E4E50;  /* Warna judul */
+        color: #4CAF50;  /* Warna hijau untuk judul */
         font-family: 'Arial', sans-serif;  /* Font judul */
+        text-align: center;  /* Rata tengah */
     }
     h4 {
-        color: #1F5B8B;  /* Warna subjudul */
+        color: #FFFFFF;  /* Warna putih untuk subjudul */
         font-family: 'Arial', sans-serif;  /* Font subjudul */
+        text-align: center;  /* Rata tengah */
     }
     .upload-container {
-        border: 2px dashed #1F5B8B;  /* Garis batas untuk area upload */
+        border: 2px dashed #4CAF50;  /* Garis batas hijau untuk area upload */
         padding: 20px;
         border-radius: 10px;
         text-align: center;
-        background-color: #ffffff;
+        background-color: #1F1F1F;  /* Latar belakang abu-abu gelap untuk area upload */
         margin-bottom: 20px;  /* Jarak antar elemen */
+    }
+    .card {
+        border: 1px solid #4CAF50;  /* Garis batas hijau untuk kartu */
+        border-radius: 10px;  /* Sudut melengkung */
+        padding: 10px;
+        background-color: #1F1F1F;  /* Latar belakang abu-abu gelap untuk kartu */
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);  /* Bayangan halus */
+        margin-bottom: 20px;  /* Jarak antar kartu */
     }
     </style>
     """,
