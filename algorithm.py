@@ -48,7 +48,7 @@ def kmeans_clustering(pixel_values, n_clusters=3, max_iter=100, tol=1e-4):
 
     return centroids, cluster_labels
 
-def segment_images(images, n_clusters=3):
+def segment_images(images, n_clusters):
     """Segmentasi gambar berdasarkan centroid yang dihitung dari semua gambar."""
     all_pixel_values = []
     image_shapes = []  # Menyimpan ukuran asli gambar
@@ -66,8 +66,11 @@ def segment_images(images, n_clusters=3):
     centroids, cluster_labels = kmeans_clustering(all_pixel_values, n_clusters)
 
     # Hitung Silhouette Score
-    silhouette_avg = silhouette_score(all_pixel_values, cluster_labels)
-    print(f'Silhouette Score untuk {n_clusters} kluster: {silhouette_avg:.4f}')
+    if len(set(cluster_labels)) > 1:  # Pastikan ada lebih dari satu cluster
+        silhouette_avg = silhouette_score(all_pixel_values, cluster_labels)
+        print(f'Silhouette Score untuk {n_clusters} kluster: {silhouette_avg:.4f}')
+    else:
+        print("Silhouette Score tidak dapat dihitung, karena hanya ada satu cluster.")
 
     # Membuat gambar tersegmentasi untuk kluster yang diproses
     segmented_images = []
